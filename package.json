@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "parcel": "^2.0.0"
+  },
+  "dependencies": {
+    "css-doodle": "^0.21.6"
   }
 }
