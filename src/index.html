@@ -7,6 +7,21 @@
     <script type="module" src="app.js"></script>
   </head>
   <body>
+    <section class="full wrapper">
+      <css-doodle class="doodle" data-refresh-rate="250">
+        @grid: 50x1 / 100%;
+
+        @place-cell: center;
+        @size: calc(75% / @I * @i);
+
+        transform: rotate(calc(@i * 5deg));
+
+        border-radius: 30%;
+        border: 1px solid hsla(
+          calc(10 + 4 * @i), 70%, 68%, @r.8
+        );
+      </css-doodle>
+    </section>
     <section class="full">
       <css-doodle class="doodle" data-refresh-rate="2800">
         :doodle {
@@ -26,7 +41,7 @@
       </css-doodle>
     </section>
     <section class="full wrapper">
-      <css-doodle class="doodle" data-refresh-rate="800">
+      <css-doodle class="doodle" data-refresh-rate="500">
         @grid: 1x10 / 85%;
 
         @place-cell: center;
