@@ -1,8 +1,8 @@
 import 'css-doodle';
 
-const doodle = document.querySelector('.doodle');
+const doodles = document.querySelectorAll('.doodle');
 
-const doodleRefreshInterval = setInterval(
-  () => doodle.update(),
-  2000
-);
+doodles.forEach((doodle) => {
+  const refreshRate = doodle.dataset.refreshRate || 2500;
+  setInterval(() => doodle.update(), refreshRate);
+});

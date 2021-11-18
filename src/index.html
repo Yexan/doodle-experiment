@@ -7,9 +7,8 @@
     <script type="module" src="app.js"></script>
   </head>
   <body>
-    <div class="main">
-
-      <css-doodle class="doodle">
+    <section class="full">
+      <css-doodle class="doodle" data-refresh-rate="2800">
         :doodle {
           @grid: 18 / 100vmax;
           background: #0a0c27;
@@ -25,7 +24,24 @@
           '100% 0, 100% 100%, 0 100%'
         ));
       </css-doodle>
-      
-    </div>
+    </section>
+    <section class="full wrapper">
+      <css-doodle class="doodle" data-refresh-rate="800">
+        @grid: 1x10 / 85%;
+
+        @place-cell: center;
+        @size: calc(@i * 10%);
+
+        border-radius: 50%;
+        border-style: dashed;
+        border-width: calc(@i * 6px);
+        border-color: hsla(
+          calc(20 * @i), 70%, 68%,
+          calc(3 / @i * .8)
+        );
+
+        transform: rotate(@r(360deg));
+      </css-doodle>
+    </section>
   </body>
 </html>
